@@ -8,7 +8,7 @@
   <!-- Check out more components here: http://getbootstrap.com/components/ -->
   <div class="page-header">
 
-  
+    <% include ../helpers/navbar %>
     <h1>Hello World</h1>
   </div>
 
@@ -17,7 +17,31 @@
   <button onClick="showPicture()" class="btn btn-dark">Click me</button>
 
   <div id="image"></div>
+
+  <button onClick="handleSignIn()">Login</button>
+  <form onSubmit="handleMessageFormSubmit()" action="#">
+    Title:<br>
+    <input type="text" id="post-title"><br>
+    Body:<br>
+    <textarea id="post-body"></textarea>
+    <br>
+    <button>Submit</button>
+  </form>
+
+  <div id="post-listing"></div>
+
+  <input type="text" class="search" placeholder="Enter Your City">
+  <button type="button" onClick="searchWeather()">search</button>
+  <div class="error-message"></div>
+
+  <div class="city">
+
+  </div>
   
+  <div class="temp">
+    
+  </div>
+
 </body>
 
 </html>
